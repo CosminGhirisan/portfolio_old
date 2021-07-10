@@ -1,0 +1,538 @@
+/* PAGE RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/*  ----- PAGE DESIGN PART ----- */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Total width will include paddings and borders */
+  font-size: 62.5%;
+  /* defining 1rem = 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    -ms-grid-columns: 30rem 1fr;
+        grid-template-columns: 30rem 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 120rem;
+    margin: auto;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+/*-------------------------------------
+---------------------------------------
+-------------- LEFTSIDE ---------------
+---------------------------------------
+-------------------------------------*/
+#leftside {
+  background-color: #060730;
+  color: #fff;
+  padding-bottom: 3rem;
+}
+
+#leftside .red-line {
+  width: 15rem;
+  border: 1px solid rgba(150, 0, 0, 0.8);
+  position: absolute;
+  top: 10rem;
+  left: 3.5rem;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .red-line {
+    display: unset;
+  }
+}
+
+#leftside .blue-line {
+  width: 34rem;
+  border: 1px solid #060730;
+  position: absolute;
+  top: 10rem;
+  left: 50.7rem;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .blue-line {
+    display: unset;
+  }
+}
+
+#leftside .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .info {
+    padding-top: 23rem;
+  }
+}
+
+#leftside .info .name {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .info .name {
+    display: none;
+  }
+}
+
+#leftside .info .avatar img {
+  width: 15rem;
+  border-radius: 50%;
+  margin: 2rem 2rem 1rem 1rem;
+  -webkit-box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#leftside .info .avatar img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .info .avatar {
+    position: absolute;
+    right: -9rem;
+    top: 1rem;
+  }
+}
+
+#leftside .curent-job {
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .curent-job {
+    margin-top: 23rem;
+    display: none;
+  }
+}
+
+#leftside h2 {
+  color: rgba(150, 0, 0, 0.8);
+  margin: 3rem 0 0.7rem 0;
+  font-size: 2.1rem;
+}
+
+#leftside .personal-description {
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-align: justify;
+  padding: 0 3rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #leftside .personal-description {
+    padding: 0 6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #leftside .personal-info-sm {
+    display: none;
+  }
+}
+
+#leftside .skills-title {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+#leftside .cv-title {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: left;
+  padding-top: 3rem;
+}
+
+#leftside .download {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+
+#leftside .skills-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem auto;
+}
+
+#leftside .skills-container .skills-icon {
+  width: 7rem;
+  text-align: left;
+}
+
+#leftside .skills-container .skills-icon i {
+  font-size: 3rem;
+  padding: 0 0.5rem;
+}
+
+#leftside .skills-bar {
+  width: 100%;
+  background-color: #fff;
+}
+
+/*-------------------------------------
+---------------------------------------
+-------------- RIGHTSIDE --------------
+---------------------------------------
+-------------------------------------*/
+#rightside {
+  padding-right: 2rem;
+}
+
+#rightside .about-me {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #rightside .about-me {
+    margin-left: 17rem;
+    margin-top: 3.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: inherit;
+  }
+  #rightside .about-me h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgba(34, 32, 33, 0.9);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  #rightside .about-me h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #rightside .about-me .curent-job {
+    font-size: 1.6rem;
+    color: rgba(34, 32, 33, 0.4);
+    margin-bottom: 1.5rem;
+  }
+  #rightside .about-me .black-line {
+    width: 100%;
+    border: 1px solid #060730;
+  }
+  #rightside .about-me table {
+    margin-top: 1rem;
+  }
+  #rightside .about-me td {
+    color: rgba(34, 32, 33, 0.4);
+    padding: 0 2rem 0 0;
+  }
+}
+
+#rightside .title {
+  width: 100%;
+  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#rightside .title h2 {
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #rightside .title h2 {
+    margin-top: 5rem;
+  }
+}
+
+#rightside .title .black-line {
+  width: 100%;
+  border: 1px solid #060730;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 3rem;
+  margin-left: 0rem;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #rightside .title .black-line {
+    display: unset;
+    margin-top: 5rem;
+  }
+}
+
+#rightside .portfolio-text {
+  margin: 1rem 2rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+#rightside .portfolio-projects {
+  margin: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#rightside .portfolio-cards {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgba(150, 0, 0, 0.8);
+  color: #060730;
+  -webkit-box-shadow: 1px 1px 12px #960000;
+          box-shadow: 1px 1px 12px #960000;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#rightside .portfolio-cards:hover {
+  background-color: #fff;
+  color: rgba(150, 0, 0, 0.8);
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+
+#rightside .exp-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  margin: 1rem 2rem;
+  margin-right: 0;
+}
+
+#rightside .exp-card .details .period {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: rgba(150, 0, 0, 0.8);
+}
+
+#rightside .exp-card .details .position {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #222021;
+}
+
+#rightside .exp-card .details .company {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #222021;
+}
+
+#rightside .exp-card .details .teach-place {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #222021;
+  margin-bottom: 1rem;
+}
+
+#rightside .exp-card .details-right {
+  font-weight: 200;
+  text-align: justify;
+}
+
+#rightside .exp-card .black-line-end {
+  width: 25%;
+  border: 1px solid rgba(6, 7, 48, 0.3);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*-------------------------------------
+---------------------------------------
+--------------- BUTTON ----------------
+---------------------------------------
+-------------------------------------*/
+.btn {
+  display: inline-block;
+  width: 50%;
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #060730;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: rgba(150, 0, 0, 0.8);
+  color: #060730;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    display: none;
+  }
+}
+
+.html {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 85%, #fff 0%);
+}
+
+.fa-html5 {
+  color: #e34c26;
+}
+
+.css {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 85%, #fff 0%);
+}
+
+.fa-css3-alt {
+  color: #264de4;
+}
+
+.sass {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 75%, #fff 0%);
+}
+
+.fa-sass {
+  color: #c69;
+}
+
+.js {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 30%, #fff 0%);
+}
+
+.fa-js {
+  color: #f0db4f;
+}
+
+.react {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 15%, #fff 0%);
+}
+
+.fa-react {
+  color: #61dbfb;
+}
+
+.nodejs {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 15%, #fff 0%);
+}
+
+.fa-node {
+  color: #68a063;
+}
+
+.python {
+  height: 93%;
+  background-image: linear-gradient(135deg, #060730 0%, #960000 15%, #fff 0%);
+}
+
+.fa-python {
+  color: #4b8bbe;
+}
+/*# sourceMappingURL=main.css.map */

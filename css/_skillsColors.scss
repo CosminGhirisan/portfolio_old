@@ -1,0 +1,90 @@
+.html {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 85%,
+    $white-color 0%
+  );
+}
+.fa-html5 {
+  color: #e34c26;
+}
+
+.css {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 85%,
+    $white-color 0%
+  );
+}
+.fa-css3-alt {
+  color: #264de4;
+}
+
+.sass {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 75%,
+    $white-color 0%
+  );
+}
+.fa-sass {
+  color: #c69;
+}
+
+.js {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 30%,
+    $white-color 0%
+  );
+}
+.fa-js {
+  color: #f0db4f;
+}
+
+.react {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 15%,
+    $white-color 0%
+  );
+}
+.fa-react {
+  color: #61dbfb;
+}
+
+.nodejs {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 15%,
+    $white-color 0%
+  );
+}
+.fa-node {
+  color: #68a063;
+}
+
+.python {
+  height: $skill-height;
+  background-image: linear-gradient(
+    135deg,
+    $blue-color 0%,
+    $red-color-darker 15%,
+    $white-color 0%
+  );
+}
+.fa-python {
+  color: #4b8bbe;
+}

@@ -1,0 +1,33 @@
+body.dark {
+  background-color: hsl(230, 17%, 14%);
+}
+
+#buton-dark{
+  color: #6b6b6b;
+}
+
+.buton-text-dark{
+  color: white;
+}
+
+.buton-dark-switch{
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+.buton-dark-switch:hover,
+.buton-dark-switch:focus {
+  transform: scale(1.2);
+}
+
+.buton-normal-switch{
+  color: green;
+}
+
+.text-dark {
+  color: white;
+}
+
+.background-dark {
+  background-color: rgb(43, 44, 51);
+}

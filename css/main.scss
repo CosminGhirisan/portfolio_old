@@ -1,0 +1,420 @@
+@import "variables.scss";
+
+/* PAGE RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*  ----- PAGE DESIGN PART ----- */
+html {
+  box-sizing: border-box; /* Total width will include paddings and borders */
+  font-size: 62.5%; /* defining 1rem = 10px */
+}
+
+body {
+  font-size: $normal-font;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 30rem 1fr;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    width: 120rem;
+    margin: auto;
+  }
+}
+
+h2 {
+  font-size: $bigger-font;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media only screen and (min-width: 768px) {
+    font-size: $big-font;
+  }
+}
+
+/*-------------------------------------
+---------------------------------------
+-------------- LEFTSIDE ---------------
+---------------------------------------
+-------------------------------------*/
+#leftside {
+  background-color: $blue-color;
+  color: $white-color;
+  padding-bottom: 3rem;
+
+  .red-line {
+    width: 15rem;
+    border: 1px solid $red-color;
+    position: absolute;
+    top: 10rem;
+    left: 3.5rem;
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      display: unset;
+    }
+  }
+
+  .blue-line {
+    width: 34rem;
+    border: 1px solid $blue-color;
+    position: absolute;
+    top: 10rem;
+    left: 50.7rem;
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      display: unset;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    @media only screen and (min-width: 768px) {
+      padding-top: 23rem;
+    }
+
+    .name {
+      font-size: $big-font;
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 1rem;
+
+      @media only screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .avatar {
+      img {
+        width: 15rem;
+        border-radius: 50%;
+        margin: 2rem 2rem 1rem 1rem;
+        box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.4);
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        position: absolute;
+        right: -9rem;
+        top: 1rem;
+      }
+    }
+  }
+
+  .curent-job {
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+    @media only screen and (min-width: 768px) {
+      margin-top: 23rem;
+      display: none;
+    }
+  }
+
+  h2 {
+    color: $red-color;
+    margin: 3rem 0 0.7rem 0;
+    font-size: 2.1rem;
+  }
+
+  .personal-description {
+    font-size: $smaller-font;
+    font-weight: 200;
+    text-align: justify;
+    padding: 0 3rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 6rem;
+    }
+  }
+
+  .personal-info-sm {
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .skills-title {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: left;
+  }
+
+  .cv-title {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: left;
+    padding-top: 3rem;
+  }
+
+  .download {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+  }
+
+  .skills-container {
+    width: 80%;
+    display: flex;
+    margin: 1rem auto;
+
+    .skills-icon {
+      width: 7rem;
+      text-align: left;
+
+      i {
+        font-size: $big-font;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  .skills-bar {
+    width: 100%;
+    background-color: $white-color;
+  }
+}
+
+/*-------------------------------------
+---------------------------------------
+-------------- RIGHTSIDE --------------
+---------------------------------------
+-------------------------------------*/
+#rightside {
+  padding-right: 2rem;
+
+  .about-me {
+    display: none;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .about-me {
+      margin-left: 17rem;
+      margin-top: 3.5rem;
+      font-size: $smaller-font;
+      font-weight: 400;
+      display: inherit;
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: rgba($gray-color, 0.9);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+
+        @media only screen and (min-width: 992px) {
+          font-size: $big-font;
+        }
+      }
+
+      .curent-job {
+        font-size: $normal-font;
+        color: rgba($gray-color, 0.4);
+        margin-bottom: 1.5rem;
+      }
+
+      .black-line {
+        width: 100%;
+        border: 1px solid $blue-color;
+      }
+
+      table {
+        margin-top: 1rem;
+      }
+
+      td {
+        color: rgba($gray-color, 0.4);
+        padding: 0 2rem 0 0;
+      }
+    }
+  }
+
+  .title {
+    width: 100%;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      margin-top: 3rem;
+      margin-right: 1rem;
+
+      @media only screen and (min-width: 768px) {
+        margin-top: 5rem;
+      }
+    }
+
+    .black-line {
+      width: 100%;
+      border: 1px solid $blue-color;
+      align-self: center;
+      margin-top: 3rem;
+      margin-left: 0rem;
+      display: none;
+
+      @media only screen and (min-width: 768px) {
+        display: unset;
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  .portfolio-text {
+    margin: 1rem 2rem;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .portfolio-projects {
+    margin: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio-cards {
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    font-size: $smaller-font;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $red-color;
+    color: $blue-color;
+    box-shadow: 1px 1px 12px $red-color-darker;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $white-color;
+      color: $red-color;
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  .exp-card {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 1rem 2rem;
+    margin-right: 0;
+
+    .details {
+      .period {
+        font-size: $smaller-font;
+        font-weight: 700;
+        line-height: 2rem;
+        color: $red-color;
+      }
+
+      .position {
+        font-size: $normal-font;
+        font-weight: 700;
+        line-height: 3rem;
+        color: $gray-color;
+      }
+
+      .company {
+        font-size: $bigger-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        color: $gray-color;
+      }
+
+      .teach-place {
+        font-size: $normal-font;
+        font-weight: 700;
+        line-height: 3rem;
+        color: $gray-color;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .details-right {
+      font-weight: 200;
+      text-align: justify;
+
+      @media only screen and (min-width: 768px) {
+      }
+    }
+
+    .black-line-end {
+      width: 25%;
+      border: 1px solid rgba($blue-color, 0.3);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/*-------------------------------------
+---------------------------------------
+--------------- BUTTON ----------------
+---------------------------------------
+-------------------------------------*/
+.btn {
+  display: inline-block;
+  width: 50%;
+  font-size: $bigger-font;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  color: $white-color;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: $blue-color;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: $red-color;
+    color: $blue-color;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// ----- IMPORTS ----- //
+@import "skillsColors.scss";

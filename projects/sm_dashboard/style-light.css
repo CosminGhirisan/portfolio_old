@@ -1,0 +1,272 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333;
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+
+/* //////////////////////////////////////////////////
+    GRID arange
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: .3fr 1fr 1.5fr;
+  position: relative;
+}
+
+.titles {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+.overview {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.overview-today {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+  margin-bottom: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: .25 1fr 1fr;
+  grid-gap: 4rem;
+}
+
+.title{
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+/* //////////////////////////////////////////////////
+    TITLES
+*/
+.heading-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0 0 0;
+}
+
+.heading-2 {
+  font-size: 2.2rem;
+  color: grey;
+  margin-top: 3rem;
+}
+
+.heading-3 {
+  font-size: 1.4rem;
+  color: grey;
+}
+
+
+/* //////////////////////////////////////////////////
+    BUTTON LIGHT / DARK MODE
+*/
+.btn{
+  width: 20rem;
+  height: 3rem;
+
+  position: absolute;
+    top: 2rem;
+    right: 0;
+
+  text-align: end;
+  padding-right: 1rem;
+}
+
+.buton-text{
+  font-size: 2rem;
+  color: #6b6b6b;
+  display: inline-block;
+  padding-right: .5rem;
+}
+
+
+
+/* //////////////////////////////////////////////////
+    OVERVIEW
+*/
+.overview-piece-1,
+.overview-piece-2,
+.overview-piece-3,
+.overview-piece-4 {
+  background-color: rgb(228, 225, 226);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.overview-first {
+  padding-top: 3rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.overview-first-text {
+  color: #6b6b6b;
+  font-size: 1.6rem;
+  display: inline-table;
+  vertical-align: top;
+}
+
+.overview-second {
+  font-weight: bold;
+  font-size: 5rem;
+  color: black;
+}
+
+.overview-third {
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  font-size: 1.2rem;
+  color: #6b6b6b;
+}
+
+.overview-forth {
+  padding-top: 4rem;
+  color: #07ceb3;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.arrow-up-down{
+  padding-right: .5rem;
+  padding-top: 1px;
+}
+
+.overview-forth-red{
+  padding-top: 4rem;
+  color: #d11d1d;
+  font-weight: bolder;
+}
+
+.icons{
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.icons-f{  color: hsl(195, 100%, 45%);}
+
+.icons-t{  color: hsl(203, 89%, 53%);}
+
+.icons-i{ 
+  display: inline-block; 
+    background-image: linear-gradient(to right top, rgb(175, 129, 169), red);
+    -webkit-background-clip: text;/* used to put the background-image only behind the text */
+    color: transparent; /* used to make visible the background-image set */
+ }
+
+.icons-y{  color: hsl(348, 97%, 39%);}
+
+
+
+/* //////////////////////////////////////////////////
+    OVERVIEW TODAY
+*/
+.first-part-overview{
+  display:inline-block;
+  padding-top: 1.2rem;
+  font-weight: bold;
+  color: #6b6b6b;
+  
+}
+
+.first-part-overview-2{
+  display:inline-block;
+  padding-top: 1.5rem;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5rem;
+}
+
+.second-part-overview{
+  display:inline-block;
+  padding-top: 4rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.second-part-overview-2{
+  display:inline-block;
+  padding-top: 4.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  float: right;
+}
+
+.second-part-overview-2-red{  color: #d11d1d}
+
+.second-part-overview-2-green{  color: #07ceb3;}
+
+.overview-today-place-1,
+.overview-today-place-2,
+.overview-today-place-3,
+.overview-today-place-4,
+.overview-today-place-5,
+.overview-today-place-6,
+.overview-today-place-7,
+.overview-today-place-8 {
+  background-color: rgb(228, 225, 226);
+  border-radius: 3px;
+  padding: 2rem; 
+}
+
+
+/* /////////////////////////////////////////////////
+ BUTTON BACK
+*/
+.btn-back {
+  width: 10rem;
+  height: 4rem;
+  display: block;
+  position: fixed;
+    top: 3rem;
+    left: 5rem;   
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: .9rem;
+  z-index: 9999;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  background-color: rgba(119, 136, 153, 0.7);
+  transition: all .2s;
+}  
+
+.btn-back__btn {
+  text-decoration: none;
+  color: rgb(6, 7, 48);
+  transition: all .2s;    
+}
+
+.btn-back:hover {
+  background-color: rgba(150, 0, 0, .2);
+  transform: translateY(-3px) scale(1.05);
+}
